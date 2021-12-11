@@ -1,19 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Desenvolvedor M3</title>
   <link rel="stylesheet" href="main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
-
 <body>
+  <section class="contOrdenar" id="sidebarIzq"> <!--Sección menú lateral para "Ordenar"-->
+      <div class="contTituloBtn">
+        <h1>ORDENAR</h1>
+        <img class="cruzCerrar" src="img/Close 1.png" alt="">
+      </div>
+      <ul class="listaOrdenar">
+        <li class="elementoLista">
+          <a href="#" class="aLista">Más reciente</a>
+        </li>
+        <li class="elementoLista">
+          <a href="#" class="aLista">Mayor precio</a>
+        </li>
+        <li class="elementoLista">
+          <a href="#" class="aLista">Menor precio</a>
+        </li>
+      </ul>
+  </section>
 
+  <section class="contFiltrar" id="sidebarDer"> <!--Sección menú lateral para "Filtrar"-->
+    <div class="contTituloBtn">
+      <h1>FILTRAR</h1>
+      <img class="cruzCerrarFiltrar" src="img/Close 1.png" alt="">
+    </div>
+    <ul class="listaFiltrar">
+      <li class="contlistaColores"> <!--/////////////////Seguir desde acá colocando clases y editando listas y fijarse el dropdown-->
+        <a href="#" class="aLista">COLORES<img src="img/DropDown.png" class="dropdown1" alt=""></a>
+        <ul class="listaColores" id="colapsColores">
+          <li>
+            <label for="cbox1"><input type="checkbox" name="amarillo" id=""> Amarillo</label>
+          </li>
+          <li>
+            <label for="cbox2"><input type="checkbox" name="azul" id=""> Azul</label>
+          </li>
+          <li>
+            <label for="cbox3"><input type="checkbox" name="blanco" id=""> Blanco</label>
+          </li>
+          <li>
+            <label for="cbox4"><input type="checkbox" name="gris" id=""> Gris</label>
+          </li>
+          <li>
+            <label for="cbox5"><input type="checkbox" name="naranja" id=""> Naranja</label>
+          </li>
+          <li>
+            <label for="cbox6"><input type="checkbox" name="verde" id=""> Verde</label>
+          </li>
+          <li>
+            <label for="cbox7"><input type="checkbox" name="rojo" id=""> Rojo</label>
+          </li>
+          <li>
+            <label for="cbox8"><input type="checkbox" name="negro" id=""> Negro</label>
+          </li>
+          <li>
+            <label for="cbox9"><input type="checkbox" name="rosa" id=""> Rosa</label>
+          </li>
+          <li>
+            <label for="cbox10"><input type="checkbox" name="vino" id=""> Vino</label>
+          </li>
+        </ul>
+      </li>
+      <li class="listaTalles">
+        <a href="#" class="aLista">TALLES<img src="img/DropDown.png" class="dropdown2" alt=""></a>
+        <ul class="conBtnTalles" id="colapsTalles">
+          <li>
+            <button>S</button>
+          </li>
+          <li>
+            <button>M</button>
+          </li>
+          <li>
+            <button>L</button>
+          </li>
+          <li>
+            <button>XL</button>
+          </li>
+          <li>
+            <button>XXL</button>
+          </li>
+          <li>
+            <button>36</button>
+          </li>
+          <li>
+            <button>38</button>
+          </li>
+          <li>
+            <button>40</button>
+          </li>
+          <li>
+            <button>42</button>
+          </li>
+          <li>
+            <button>44</button>
+          </li>
+          <li>
+            <button>46</button>
+          </li>
+        </ul>
+      </li>
+      <li class="listaPrecios">
+        <a href="#" class="aLista">RANGO DE PRECIO<img src="img/DropDown.png" class="dropdown3" alt=""></a>
+        <ul class="contListaPrecios" id="colapsPrecios">
+          <li>
+            <input type="checkbox" name="0a50" id=""> de R$0 a R$50
+          </li>
+          <li>
+            <input type="checkbox" name="51a150" id=""> de R$51 a R$150
+          </li>
+          <li>
+            <input type="checkbox" name="151a300" id=""> de R$151 a R$300
+          </li>
+          <li>
+            <input type="checkbox" name="301a500" id=""> de R$301 a R$500
+          </li>
+          <li>
+            <input type="checkbox" name="masde500" id=""> a partir de R$ 500
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <header class="headerMobile"> <!--Encabezado con logo de la empresa y carrito de compras. -->
+      <div class="contLogo">
+        <img class="logoM3" src="img/logo-m3.png" alt="">
+      </div>
+      <div class="contImgCarrito">
+        <img class="imgCarrito" src="img/cart.png" alt="">
+      </div>
+  </header>
+
+  <div class="contTitulo">    <!--Contiene el título "Blusa" y el btón "Ordenar" para el formato Desktop-->
+    <h1 class="titulo">Blusas</h1>
+    <div class="seccionOrdernarDesktop">
+      <div class="contBtnOrdDesk">
+        <h3>Ordenar por:</h3> 
+        <img id="deplegarOrdDesk" src="img/DropDown.png" alt="">
+      </div>
+      <div class="listaOrdDesktop">
+        <ul class="ulOrdDesktop">
+          <li class="">
+            <a href="#" class="">Más reciente</a>
+          </li>
+          <li class="">
+            <a href="#" class="">Mayor precio</a>
+          </li>
+          <li class="">
+            <a href="#" class="">Menor precio</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="contBotones">   <!--Botones para el filtrado de y el orden de los productos.-->
+      <button class="btn filtrar toogleBtnFiltrar">Filtrar</button>
+      <button class="btn ordenar toogleBtnOrdenar">Ordenar</button>
+  </div>
+
+  <section class="filtrarDesktop" id=""> <!--Sección menú lateral para "Filtrar"-->
+    <ul class="listaFiltrar">
+      <li class="contlistaColores"> <!--/////////////////Seguir desde acá colocando clases y editando listas y fijarse el dropdown-->
+        <h3>COLORES</h3>
+        <ul class="listaColores" id="">
+          <li>
+            <label for="cbox1"><input type="checkbox" name="amarillo" id=""> Amarillo</label>
+          </li>
+          <li>
+            <label for="cbox2"><input type="checkbox" name="azul" id=""> Azul</label>
+          </li>
+          <li>
+            <label for="cbox3"><input type="checkbox" name="blanco" id=""> Blanco</label>
+          </li>
+          <li>
+            <label for="cbox4"><input type="checkbox" name="gris" id=""> Gris</label>
+          </li>
+          <li>
+            <label for="cbox5"><input type="checkbox" name="naranja" id=""> Naranja</label>
+          </li>
+          <li>
+            <label for="cbox6"><input type="checkbox" name="verde" id=""> Verde</label>
+          </li>
+          <li>
+            <label for="cbox7"><input type="checkbox" name="rojo" id=""> Rojo</label>
+          </li>
+          <li>
+            <label for="cbox8"><input type="checkbox" name="negro" id=""> Negro</label>
+          </li>
+          <li>
+            <label for="cbox9"><input type="checkbox" name="rosa" id=""> Rosa</label>
+          </li>
+          <li>
+            <label for="cbox10"><input type="checkbox" name="vino" id=""> Vino</label>
+          </li>
+        </ul>
+      </li>
+      <li class="listaTalles">
+        <h3>TALLES</h3>
+        <ul class="conBtnTalles" id="">
+          <li>
+            <button>S</button>
+          </li>
+          <li>
+            <button>M</button>
+          </li>
+          <li>
+            <button>L</button>
+          </li>
+          <li>
+            <button>XL</button>
+          </li>
+          <li>
+            <button>XXL</button>
+          </li>
+          <li>
+            <button>36</button>
+          </li>
+          <li>
+            <button>38</button>
+          </li>
+          <li>
+            <button>40</button>
+          </li>
+          <li>
+            <button>42</button>
+          </li>
+          <li>
+            <button>44</button>
+          </li>
+          <li>
+            <button>46</button>
+          </li>
+        </ul>
+      </li>
+      <li class="listaPrecios">
+        <h3>RANGO DE PRECIO</h3>
+        <ul class="contListaPrecios" id="">
+          <li>
+            <input type="checkbox" name="0a50" id=""> de R$0 a R$50
+          </li>
+          <li>
+            <input type="checkbox" name="51a150" id=""> de R$51 a R$150
+          </li>
+          <li>
+            <input type="checkbox" name="151a300" id=""> de R$151 a R$300
+          </li>
+          <li>
+            <input type="checkbox" name="301a500" id=""> de R$301 a R$500
+          </li>
+          <li>
+            <input type="checkbox" name="masde500" id=""> a partir de R$ 500
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <div class="contImg">
+    <div>
+      <img src="img/img_2.png" alt="">
+      <h1>CAMISETA MESCLA</h1>
+      <h2>R$ 28,80</h2>
+      <h3>promo x 3</h3>
+      <button>COMPRAR</button>
+    </div>
+    <div>
+      <img src="img/img_3.png" alt="">
+      <h1>CAMISETA MESCLA</h1>
+      <h2>R$ 28,80</h2>
+      <h3>promo x 3</h3>
+      <button>COMPRAR</button>
+    </div>
+    <div>
+      <img src="img/img_4.png" alt="">
+      <h1>CAMISETA MESCLA</h1>
+      <h2>R$ 28,80</h2>
+      <h3>promo x 3</h3>
+      <button>COMPRAR</button>
+    </div>
+    <div>
+      <img src="img/img_5.png" alt="">
+      <h1>CAMISETA MESCLA</h1>
+      <h2>R$ 28,80</h2>
+      <h3>promo x 3</h3>
+      <button>COMPRAR</button>
+    </div>
+  </div>
+
+  <div class="contBtnCargarMas">
+    <button>CARGAR MAS</button>
+  </div>
+
+  <footer class="footer">
+    <h1>
+      M3: IMPLEMENTACION DE E-COMMERCE VTEX
+    </h1>
+  </footer>
+
+
+  <script src="bundle.js"></script> 
 </body>
-<h1>Desafio m3</h1>
-
-<script src="bundle.js"></script>
-
 </html>

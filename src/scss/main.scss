@@ -1,1 +1,403 @@
 @import "reset";
+
+// #000000
+// #808080
+// #666666
+// #00c0ee
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+} 
+
+body {
+    // padding: 0px 5px 0px 5px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.filtrarDesktop, .seccionOrdernarDesktop{
+    display: none;
+}
+
+#sidebarIzq {         //Sección de para el menú lateral.
+    position: absolute;
+    height: 100%;
+    width: 318px;
+    background-color: #fff;
+    left: -500px;
+    transition: all 500ms linear;
+}
+
+#sidebarIzq.active {
+   left: 0px;
+}
+
+.contTituloBtn{       //Div para contener el "ORDENAR" y la cruz de cierre.
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 2px gray;
+    padding-bottom: 7px;
+}
+
+.contTituloBtn h1 {
+    font-size: 32px;
+}
+
+.listaOrdenar .listaFiltrar {      //La ul propiamente dicha
+    margin-top: 20px;
+}
+
+.elementoLista {        //Los li propiamente dichos del sider Ordenar
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.aLista:hover{
+    cursor: pointer;
+    // color: burlywood;
+}
+
+.aLista {                 // los a de cada li de Ordenar
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+#sidebarDer {         //Sección de para el menú lateral. derecho FILTRAR
+    position: absolute;
+    height: 710px;
+    width: 318px;
+    background-color: #fff;
+    left: -500px;
+    transition: all 500ms linear;
+}
+
+#sidebarDer.active {
+   left: 0px;
+}
+
+.listaColores label {
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.listaColores li {
+    margin-bottom: 10px;
+    // display: none;
+
+}
+
+.listaTalles ul {   
+    display: grid;
+    grid-template-columns: repeat(4, 35px);
+    grid-gap: 10px 10px;
+    // display: none;    
+
+}
+
+.listaTalles ul li button {
+    height: 35px;
+    width: 35px;
+    font-size: 16px;
+    font-family: 'Open Sans';
+    background: white;
+    border-style: double;
+}
+
+.contListaPrecios li {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#colapsColores, #colapsTalles, #colapsPrecios  {      //Modificar esta clase para mostrar los colores.
+    display: none;
+}
+
+#colapsColores.desplegar {
+    display: block;
+}
+
+#colapsTalles.desplegar {
+    display: grid;
+}
+
+#colapsPrecios.desplegar {
+    display: block;
+}
+
+//////////////////////////////////////////DESDE ACA ARRANCA EL BODY.//////////////////////////////////////////////
+.headerMobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: solid 2px gray ;
+    padding: 5px 10px 5px 10px;
+}
+
+.logoM3 {
+    height: 27px;
+    width: auto;
+}
+
+.imgCarrito {
+    height: 17px;
+    width: auto;
+}
+
+.contTitulo{
+    display: flex;
+    justify-content: center;
+    margin: 25px 5px 20px 5px;
+}
+
+.titulo {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.contBotones {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {                //Botones para filtrar y ordenar
+    width: 145px;
+    height: auto;
+    font-weight: 100;
+    font-size: 32px; // no me toma el peso de la letra.
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: transparent;
+    border-style: solid;
+}
+
+.ordenar {
+    border-left: none;
+}
+
+.contImg {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(2, 156px);
+    grid-gap: 20px 5px;
+    justify-content: center;
+}
+
+.contImg img {
+    width: 155px;
+    height: auto;
+}
+
+.contImg h1 {
+    margin-top: 10px;
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    // line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contImg h2 {
+    margin-top: 10px;
+    color: #000000;
+    // font-style: ;
+    font-weight: 700;
+    font-size: 16px;
+    // line-height: 22px;
+    text-align: center;
+}
+
+.contImg h3{
+    // margin-top: 5px;
+    font-family: 'Open Sans';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 22px;
+    font-size: 16px;
+    text-align: center;
+    color: #666666;
+}
+
+.contImg div button {
+    margin-top: 10px;
+    background-color: #000000;
+    color: #ffffff;
+    width: 155px;
+    height: 33px;
+    border-style: none;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+.contBtnCargarMas {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+.contBtnCargarMas button {
+    width: 180px;
+    height: 35px;
+    background-color: #00C0EE;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border-style: none;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    margin-top: 45px;
+    height: 40px;
+    width: 100%;
+    background-color: #000000;
+}
+
+footer h1 {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+@media (min-width: 768px) {
+    .headerMobile {
+        padding: 10px 0px 10px 0px;
+    }
+    .contLogo{
+        margin-left: 50px;
+    }
+    .contImgCarrito{
+        margin-right: 50px;
+    }
+    .contTitulo {
+        display: flex;
+        margin-left: 50px;
+        margin-right: 50px;
+        justify-content: space-between;
+    }
+    .seccionOrdernarDesktop{
+        display: block;
+    }
+    .contBotones {
+        display: none;
+    }
+    .contBtnOrdDesk{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 3px 0px 3px 10px;
+        height: 45px;
+        width: 155px;
+        border: 1px solid rgba(0, 0, 0, 0.5)
+    }
+    .contBtnOrdDesk h3 {
+        color: #000000;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .listaOrdDesktop a{
+        padding-left: 10px;
+        text-decoration: none;
+        color: #000000;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .listaOrdDesktop li{
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+    .listaOrdDesktop ul{
+        display: none;
+        width: 155px;
+        border: 1px solid rgba(0, 0, 0, 0.5)
+    }
+    .listaOrdDesktop ul.abrir{
+        display: block;
+        position: absolute;
+    }
+    .contImg {
+        grid-template-columns: repeat(3, 155px);
+        grid-gap: 40px 15px;
+        justify-content: end;
+        margin-right: 50px;
+    }
+    .contImg img {
+        width: 155PX;
+        height: auto;
+    }
+    .contImg button {
+        width: 100%;
+    }
+    .seccionOrdernarDesktop{
+        display: block;
+    }
+    .filtrarDesktop {
+        margin-left: 50px;
+        display: block;
+        position: absolute;
+    }
+    .listaTalles, .listaPrecios {
+        margin-top: 20px;
+    }
+    .listaColores, .conBtnTalles, .contListaPrecios {
+        margin-top: 7px;
+    }
+    .listaColores label {
+        font-size: 14px;
+    }
+    .listaTalles ul li button {
+        height: 32px;
+        width: 32px;
+        font-size: 16px;
+    }
+    .contListaPrecios li{
+        font-size: 14px;
+    }
+    .footer {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1000px) {
+    .contImg {
+        grid-template-columns: repeat(3, 200px);
+        grid-gap: 40px 20px;
+        justify-content: center;
+        margin-left: 150px;
+        // margin-right: 100px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .contImg {
+        grid-template-columns: repeat(3, 200px);
+        grid-gap: 50px 50px;
+        justify-content: center;
+        // margin-right: 100px;
+    }
+}
