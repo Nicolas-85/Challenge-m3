@@ -49,32 +49,40 @@ ordenDesk.addEventListener('click', function () {
     
 })
 
+//Llamada a la api propia
+const getProducts = () => { 
+    return fetch('http://localhost:5000/products')
+    .then(res=> res.json()).then(res=> console.log(res))
+    .catch(err => console.log('petición rechazada', err))
+} 
+getProducts()
 
 
-function getProducts() {
-    fetch('http://localhost:5000/products').then(r => r.json()).then(data => {
-        let ropaAzul = [];
-        for (let index = 0; index < data.length; index++) {
-            const element = data[index];
-            if (element.color === "Cinza" ) {
-                ropaAzul.push(element);
-            }
-        } 
-        console.log(data);
-    });   
-}
-getProducts();
 
- async function postProduct() {
-    const image = new File();
-    let ropa = {}
+// function getProducts() {
+//     fetch('http://localhost:5000/products').then(r => r.json()).then(data => {
+//         let ropaAzul = [];
+//         for (let index = 0; index < data.length; index++) {
+//             const element = data[index];
+//             if (element.color === "Cinza" ) {
+//                 ropaAzul.push(element);
+//             }
+//         } 
+//         console.log(data);
+//     });   
+// }
+// getProducts();
+
+//  async function postProduct() {
+//     const image = new File();
+//     let ropa = {}
         
-        let response = await fetch('http://localhost:5000/products', {
-            method: 'POST',
-            body: JSON.stringify(ropa)
-          });
-          let result = await response.json();
-          console.log(result);
-}
+//         let response = await fetch('http://localhost:5000/products', {
+//             method: 'POST',
+//             body: JSON.stringify(ropa)
+//           });
+//           let result = await response.json();
+//           console.log(result);
+// }
 
-postProduct();
+// postProduct();
